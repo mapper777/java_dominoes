@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="689.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipo.ipo_lab_1.GameController">
+   <children>
+      <GridPane fx:id="workSpace" prefHeight="670.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="339.71427263532365" minHeight="10.0" prefHeight="34.285715920584536" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="657.7142884390695" minHeight="10.0" prefHeight="654.8571412222726" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane style="-fx-background-color: #00512c;" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="604.0" minHeight="10.0" prefHeight="580.5714111328125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="322.71427263532365" minHeight="10.0" prefHeight="74.85716029575894" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="1000.0" style="-fx-background-color: #00512c;">
+                     <children>
+                        <HBox fx:id="boneyardGrid" layoutX="100.0" layoutY="248.0" prefHeight="85.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: #510025;" />
+                     </children></Pane>
+                  <AnchorPane GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane fx:id="gameDeck" alignment="CENTER" prefHeight="75.0" prefWidth="848.0" style="-fx-background-color: #510025;">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="22.0" prefWidth="1000.0">
+               <children>
+                  <HBox layoutY="8.0" prefHeight="27.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <Button fx:id="quit" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#closeProgram" text="Quit">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="restart" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#restart" text="Restart">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
